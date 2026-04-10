@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tikki Topple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-play">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div><div class="blob blob-2"></div>
+        <div class="blob blob-3"></div><div class="blob blob-4"></div>
+        <div class="planet planet-1"></div><div class="planet planet-2"></div>
+        <!-- Scattered Stars -->
+        <div class="star" style="top: 15%; left: 25%;"></div>
+        <div class="star" style="top: 35%; left: 60%;"></div>
+        <div class="star" style="top: 55%; left: 15%;"></div>
+        <div class="star" style="top: 75%; left: 80%;"></div>
+        <div class="star" style="top: 25%; left: 85%;"></div>
+        <div class="star" style="top: 65%; left: 45%;"></div>
+        <div class="star" style="top: 10%; left: 50%;"></div>
+        <div class="star" style="top: 85%; left: 30%;"></div>
+        <div class="star" style="top: 45%; left: 5%;"></div>
+        <div class="star" style="top: 90%; left: 70%;"></div>
+    </div>
+
+    <!-- SITE NAVIGATION -->
+    <nav class="site-nav glass-panel">
+        <div class="nav-brand">Tikki Topple</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="rules.html">How to Play</a>
+            <a href="play.html" class="active">Play Game</a>
+        </div>
+    </nav>
+
+    <!-- CONTENT START -->
+    <div class="main-content-area">
+        <!-- MAIN MENU SCREEN -->
+        <main class="screen" id="screen-menu">
+            <div class="glass-panel text-center">
+                <div class="title-wrapper">
+                    <h1 class="main-title" style="font-size: 4rem;">Setup Game</h1>
+                    <div class="title-shadow" style="font-size: 4rem;">Setup Game</div>
+                </div>
+                <p class="subtitle" style="margin-bottom: 20px;">Select Player Count</p>
+                <div class="action-area" style="display:flex; gap: 10px; justify-content: center;">
+                    <button class="menu-btn" onclick="startGame(2)">2 Players</button>
+                    <button class="menu-btn" onclick="startGame(3)">3 Players</button>
+                    <button class="menu-btn" onclick="startGame(4)">4 Players</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- GAME SCREEN -->
+        <main class="screen hidden" id="screen-game">
+            <div class="game-container">
+                <!-- LEFT: TIKI BOARD -->
+                <div class="tiki-board-section glass-panel">
+                    <div class="board-header">
+                        <h2>Tiki Stack</h2>
+                    </div>
+                    <div id="tiki-lineup" class="tiki-stack">
+                        <!-- Tikis generated here by JS -->
+                    </div>
+                </div>
+
+                <!-- RIGHT: DASHBOARD -->
+                <div class="dashboard-section">
+                    <!-- TOP: SCOREBOARD -->
+                    <div class="scoreboard glass-panel">
+                        <h2 id="round-display">Round 1 / 4</h2>
+                        <div id="player-scores"></div>
+                    </div>
+
+                    <!-- BOTTOM: PLAYER TURN AREA -->
+                    <div class="player-turn-area glass-panel">
+                        <h2 id="turn-indicator">Player 1's Turn</h2>
+                        <div class="secret-card-area">
+                            <button id="peek-btn" class="menu-btn small-btn">Hold to Peek Secret Tikis 👀</button>
+                            <div id="secret-tikis-display" class="secret-tikis hidden"></div>
+                        </div>
+                        <div class="action-instruction" id="action-instruction">
+                            Select a Tiki on the board, then play a card!
+                        </div>
+                        <div id="player-hand" class="cards-container"></div>
+                        <button id="end-turn-btn" class="menu-btn hidden" style="margin-top:20px; width:100%">Pass Turn</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ROUND END OVERLAY -->
+        <main class="screen hidden" id="screen-roundover" style="z-index: 100;">
+            <div class="glass-panel text-center">
+                <h1 class="main-title" style="font-size: 3rem;">Round Over!</h1>
+                <div id="round-results" style="font-size: 1.5rem; color: white; margin: 20px 0;"></div>
+                <button class="menu-btn" onclick="startNextRound()" id="next-round-btn">Next Round</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
