@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play | Tikki Topple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-rules scrollable">
+    <div class="background-blobs">
+        <div class="blob blob-1"></div><div class="blob blob-2"></div>
+        <div class="blob blob-3"></div><div class="blob blob-4"></div>
+        <div class="planet planet-1"></div><div class="planet planet-2"></div>
+        <!-- Scattered Stars -->
+        <div class="star" style="top: 15%; left: 25%;"></div>
+        <div class="star" style="top: 35%; left: 60%;"></div>
+        <div class="star" style="top: 55%; left: 15%;"></div>
+        <div class="star" style="top: 75%; left: 80%;"></div>
+        <div class="star" style="top: 25%; left: 85%;"></div>
+        <div class="star" style="top: 65%; left: 45%;"></div>
+        <div class="star" style="top: 10%; left: 50%;"></div>
+        <div class="star" style="top: 85%; left: 30%;"></div>
+        <div class="star" style="top: 45%; left: 5%;"></div>
+        <div class="star" style="top: 90%; left: 70%;"></div>
+    </div>
+
+    <!-- SITE NAVIGATION -->
+    <nav class="site-nav glass-panel">
+        <div class="nav-brand">Tikki Topple</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="rules.html" class="active">How to Play</a>
+            <a href="play.html">Play Game</a>
+        </div>
+    </nav>
+
+    <!-- CONTENT START -->
+    <div class="container main-content">
+        <div class="glass-panel text-left" style="margin-top: 50px; padding: 50px;">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 20px; color: white;">Rulebook</h1>
+            
+            <div class="rules-content" style="color: white; font-size: 1.2rem; line-height: 1.6;">
+                <h2 style="color: var(--clr-bg-gradient-start);">Objective</h2>
+                <p>Score the most points by maneuvering your secret Tikis into the top three positions on the board by the end of the round!</p>
+
+                <hr style="margin: 30px 0; border-color: rgba(255,255,255,0.2);">
+
+                <h2 style="color: var(--clr-bg-gradient-start);">Gameplay</h2>
+                <p>On your turn, you must play exactly one action card from your hand. First, select the Tiki on the board you wish to target, then click the card to play it.</p>
+                <div style="display:flex; gap: 20px; margin-top: 20px;">
+                    <div class="glass-panel" style="flex:1; background: rgba(0,0,0,0.3); border:none;">
+                        <h3 style="color: #78ffd6;">Tiki Up (1, 2, or 3)</h3>
+                        <p>Move a Tiki up the stack by the number of spaces indicated. It pushes other Tikis down.</p>
+                    </div>
+                    <div class="glass-panel" style="flex:1; background: rgba(0,0,0,0.3); border:none;">
+                        <h3 style="color: #ffd89b;">Tiki Topple</h3>
+                        <p>Move any Tiki from anywhere in the stack straight to the very bottom position.</p>
+                    </div>
+                    <div class="glass-panel" style="flex:1; background: rgba(0,0,0,0.3); border:none;">
+                        <h3 style="color: #FF416C;">Tiki Toast</h3>
+                        <p>Remove the Tiki at the very bottom of the stack entirely from the game!</p>
+                    </div>
+                </div>
+
+                <hr style="margin: 30px 0; border-color: rgba(255,255,255,0.2);">
+
+                <h2 style="color: var(--clr-bg-gradient-start);">End of Round & Scoring</h2>
+                <p>A round ends immediately when only 3 Tikis remain on the board, or everyone runs out of cards.</p>
+                <ul style="margin-left: 30px; margin-top: 10px;">
+                    <li>If your 1st Secret Tiki is in 1st Place = <strong>9 Points</strong></li>
+                    <li>If your 2nd Secret Tiki is in 2nd Place = <strong>5 Points</strong></li>
+                    <li>If your 3rd Secret Tiki is in 3rd Place = <strong>2 Points</strong></li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="play.html" style="text-decoration: none;">
+                    <button class="menu-btn" style="font-size: 1.5rem;">Ready to Play!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Tikki Topple Web App. Designed for fun.</p>
+    </footer>
+
+</body>
+</html>
